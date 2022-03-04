@@ -5,6 +5,26 @@ session_start();
 
 if(isset($_SESSION['email'])){
 ?>
+<div class="d-flex alert alert-info text-center justify-content-around">
+    <h3 class="">Bienvenue <?= $_SESSION['email'] . "!"?> </h3>
+    <form action="" method="POST">
+    <button type="submit" name="btn-deconnexion" class="text-white bg-warning h-100 mt-2">DECONNEXION</button>
+    </form>
+    </div>
+
+    <?php
+
+
+    if(isset($_POST["btn-deconnexion"])){
+
+        session_unset();
+        session_destroy();
+        header("location:index.php");
+    }
+
+    $_SESSION["score"] = 0;
+
+?>
 
 
 <!DOCTYPE html>
@@ -18,46 +38,18 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
     
-    <title>Checkboxes</title>
+    <title>Roue de la fortune</title>
+
 
 </head>
 
 
 <body>
     
-<div class="container-fluid">
-    <div class="row text-center justify-content-center mt-5">
 
-    <?php
-
-    $tableau = $_POST["tableau"];
-
-    //var_dump($tableau);
-
-    if(isset($_POST)){
-    //echo "la variable existe";
-    }
-
-    foreach($tableau as $aliasTableau){
-        echo "Vous avez sélectionné la table de : " . $aliasTableau;
-
-        for($i = 0; $i <= 10; $i++){
-            $resultat = $i * $aliasTableau;
-            echo "$resultat" . "<br>";
-        }
-        echo "<hr>";
-    }
-    ?>
-
-        <div>
-            <button class="btn btn-outline-dark w-25 mt-3"><a href="./accueil.php">RETOUR</a></button>
-        </div>
-
-    </div>
-</div>
 
 <!-------SESSION------->
-<?php
+    <?php
     }else{
         header("location: index.php");
     }

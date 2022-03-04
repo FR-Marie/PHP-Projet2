@@ -1,7 +1,11 @@
 <?php
 //session démarrée
 session_start();
+
+
+if(isset($_SESSION['email'])){
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +50,13 @@ session_start();
     </div>    
 </div>
 
+
+<!-------SESSION------->
+<?php
+    }else{
+        header("location: index.php");
+    }
+    ?>
 </body>
 </html>
 

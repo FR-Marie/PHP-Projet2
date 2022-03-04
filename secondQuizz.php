@@ -3,7 +3,9 @@
 session_start();
 
 
+if(isset($_SESSION['email'])){
 ?>
+
 
 
 <!DOCTYPE html>
@@ -30,7 +32,7 @@ session_start();
     <div class="container-fluid">
         <div class="row text-center">
 
-            <h2 class="text-center mt-5 mb-5">Second Quizz!</h2>
+            <h2 class="text-center text-white mt-5 mb-5">Second Quizz!</h2>
 
         </div>
     </div>
@@ -103,7 +105,7 @@ session_start();
 
         ?>
 
-        <div id="question-1" class="container-fluid bg-secondary p-5 mb-5 w-50 m-auto rounded">
+        <div id="question-1" class="container-fluid bg-secondary border border-primary p-5 mb-5 w-50 m-auto rounded">
             <div class="row">
 
                         <h2 id="h2-question-quizz" class="text-center text-white"> Question n° 1 <br> <?= $questionsReponses_1["question_1"] ?> </h2>
@@ -137,8 +139,9 @@ session_start();
 
                             
                             
-                            <div class="mt-5 border bg-info border-dark rounded  text-center p-3 w-25 m-auto">
-                                    <button type="submit" name="btn-valider-question1" id="btn-valider-reponse1" class="rounded border border-warning">Valider la réponse</button>
+                            <div class="mt-5 rounded text-center p-3 w-25 m-auto">
+                                    <button type="submit" name="btn-valider-question1" id="btn-valider-reponse1" class="rounded border border-warning bg-primary text-white px-2 py-2">
+                                        <a href="#question-2"></a>Valider la réponse</button>
                             </div>
 
                             
@@ -200,7 +203,7 @@ session_start();
 
     ?>
 
-    <div id="question-2" class="container-fluid bg-secondary p-5 mb-5 w-50 m-auto rounded">
+    <div id="question-2" class="container-fluid bg-secondary border border-primary p-5 mb-5 w-50 m-auto rounded">
         <div class="row">
     
         <h2 id="h2-question-quizz" class="text-center text-white"> Question n° 2 <br> <?= $questionsReponses_2["question_2"] ?> </h2>
@@ -233,8 +236,9 @@ session_start();
                         </div>
 
 
-                        <div class="mt-5 border bg-info border-dark rounded  text-center p-3 w-25 m-auto">
-                            <button type="submit" name="btn-valider-question2" id="btn-valider-reponse2" class="rounded border border-warning">Valider la réponse</button>
+                        <div class="mt-5 rounded  text-center p-3 w-25 m-auto">
+                            <button type="submit" name="btn-valider-question2" id="btn-valider-reponse2" class="rounded border border-warning bg-primary text-white px-2 py-2">
+                            <a href="#question-3"></a>Valider la réponse</button>
                         </div>
 
 
@@ -302,7 +306,7 @@ session_start();
 
     ?>
 
-    <div id="question-3" class="container-fluid bg-secondary p-5 mb-5 w-50 m-auto rounded">
+    <div id="question-3" class="container-fluid bg-secondary border border-primary p-5 mb-5 w-50 m-auto rounded">
         <div class="row">
     
         <h2 id="h2-question-quizz" class="text-center text-white"> Question n° 3 <br> <?= $questionsReponses_3["question_3"] ?> </h2>
@@ -336,8 +340,9 @@ session_start();
 
 
                         <!-----------------BOUTON VALIDATION DE LA REPONSE----------------->
-                        <div class="mt-5 border bg-info border-dark rounded  text-center p-3 w-25 m-auto">
-                            <button type="submit" name="btn-valider-question3" id="btn-valider-reponse3" class="rounded border border-warning">Valider la réponse</button>
+                        <div class="mt-5 rounded  text-center p-3 w-25 m-auto">
+                            <button type="submit" name="btn-valider-question3" id="btn-valider-reponse3" class="rounded border border-warning bg-primary text-white px-2 py-2">
+                            <a href="#question-4"></a>Valider la réponse</button>
                         </div>
 
                     </form>
@@ -408,7 +413,7 @@ session_start();
 
     ?>
 
-    <div id="question-4" class="container-fluid bg-secondary p-5 mb-5 w-50 m-auto rounded">
+    <div id="question-4" class="container-fluid bg-secondary border border-primary p-5 mb-5 w-50 m-auto rounded">
         <div class="row">
     
         <h2 id="h2-question-quizz" class="text-center text-white"> Question n° 4 <br> <?= $questionsReponses_3["question_3"] ?> </h2>
@@ -443,8 +448,9 @@ session_start();
 
 
                         <!-----------------BOUTON VALIDATION DE LA REPONSE----------------->
-                        <div class="mt-5 border bg-info border-dark rounded  text-center p-3 w-25 m-auto">
-                            <button type="submit" name="btn-valider-question4" id="btn-valider-reponse4" class="rounded border border-warning">Valider la réponse</button>
+                        <div class="mt-5 rounded  text-center p-3 w-25 m-auto">
+                            <button type="submit" name="btn-valider-question4" id="btn-valider-reponse4" class="rounded border border-warning bg-primary text-white px-2 py-2">
+                            <a href="#question-5"></a>Valider la réponse</button>
                         </div>
 
                     </form>
@@ -521,7 +527,7 @@ session_start();
 
     ?>
 
-    <div id="question-5" class="container-fluid bg-secondary p-5 mb-5 w-50 m-auto rounded border-dark">
+    <div id="question-5" class="container-fluid bg-secondary border border-primary p-5 mb-5 w-50 m-auto rounded">
         <div class="row">
     
         <h2 id="h2-question-quizz" class="text-center text-white">  Question n° 5 <br> <?= $questionsReponses_3["question_3"] ?> </h2>
@@ -556,8 +562,9 @@ session_start();
 
                         <!-----------------BOUTON VALIDATION DE LA REPONSE----------------->
 
-                        <div class="mt-5 border bg-info border-dark rounded  text-center p-3 w-25 m-auto">
-                            <button type="submit" name="btn-valider-question5" id="btn-valider-reponse5" class="rounded border border-warning">Valider la réponse</button>
+                        <div class="mt-5 rounded  text-center p-3 w-25 m-auto">
+                            <button type="submit" name="btn-valider-question5" id="btn-valider-reponse5" class="rounded border border-warning bg-primary text-white px-2 py-2">
+                            <a href="#switch-case-score-total"></a>Valider la réponse</button>
                         </div>
 
                     </form>
@@ -631,8 +638,8 @@ session_start();
         </div>
     </div>
            
-<!-----------------BOUTON SCORE TOTAL----------------->
-
+<!-----------------SWITCH CASE SCORE TOTAL----------------->
+<div id="switch-case-score-total">
 <?php
 switch($_SESSION["score"]){
     case 0:
@@ -679,6 +686,7 @@ switch($_SESSION["score"]){
         break;
 }
 ?>
+</div>
 
         
 
@@ -687,5 +695,12 @@ switch($_SESSION["score"]){
                 <button class="btn btn-outline-dark w-50 mt-2"><a href="./accueil.php">RETOUR ACCUEIL</a></button>
             </div>
 
+
+<!-------SESSION------->
+<?php
+    }else{
+        header("location: index.php");
+    }
+    ?>
 </body>
 </html>

@@ -7,6 +7,7 @@ if(isset($_SESSION['email'])){
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,43 +19,16 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
     
-    <title>Checkboxes</title>
+    <title>Quizz PHP -Accueil-</title>
+
 
 </head>
 
 
 <body>
     
-<div class="container-fluid">
-    <div class="row text-center justify-content-center mt-5">
 
-    <?php
 
-    $tableau = $_POST["tableau"];
-
-    //var_dump($tableau);
-
-    if(isset($_POST)){
-    //echo "la variable existe";
-    }
-
-    foreach($tableau as $aliasTableau){
-        echo "Vous avez sélectionné la table de : " . $aliasTableau;
-
-        for($i = 0; $i <= 10; $i++){
-            $resultat = $i * $aliasTableau;
-            echo "$resultat" . "<br>";
-        }
-        echo "<hr>";
-    }
-    ?>
-
-        <div>
-            <button class="btn btn-outline-dark w-25 mt-3"><a href="./accueil.php">RETOUR</a></button>
-        </div>
-
-    </div>
-</div>
 
 <!-------SESSION------->
 <?php

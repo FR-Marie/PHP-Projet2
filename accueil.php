@@ -5,8 +5,22 @@ session_start();
 
 if(isset($_SESSION['email'])){
 ?>
-    <h3 class="alert alert-info text-center">Bienvenue <?= $_SESSION['email'] . "!"?></h3>;
+<div class="d-flex alert alert-info text-center justify-content-around">
+    <h3 class="">Bienvenue <?= $_SESSION['email'] . "!"?> </h3>
+    <form action="" method="POST">
+    <button type="submit" name="btn-deconnexion" class="text-white bg-warning h-100 mt-2">DECONNEXION</button>
+    </form>
+    </div>
+
     <?php
+
+
+    if(isset($_POST["btn-deconnexion"])){
+
+        session_unset();
+        session_destroy();
+        header("location:index.php");
+    }
 
     $_SESSION["score"] = 0;
 
@@ -177,11 +191,6 @@ if(isset($_SESSION['email'])){
         <h2 class="h2 mt-5 mb-4">Un second Quizz</h2>
         <button id="btn-quizz" class="rounded text-white"><a class="lien-bouton-quizz" href="secondQuizz.php">Accéder au second Quizz</a></button>
     </div>
-
-
-
-
-
 
 
 
